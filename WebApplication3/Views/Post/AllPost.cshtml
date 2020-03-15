@@ -1,0 +1,9 @@
+﻿@model IEnumerable<WebApplication3.Models.Post>
+@foreach (var i in Model)
+{
+    <h3>@i.UserId</h3>
+    <br />
+    <h3>@i.Content</h3>
+    <br />
+    <br />
+}

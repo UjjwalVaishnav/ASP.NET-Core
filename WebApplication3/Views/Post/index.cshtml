@@ -1,0 +1,40 @@
+﻿@model IEnumerable<WebApplication3.Models.Post>
+
+@foreach (var i in Model)
+{
+    <div class="border">
+    <h4>@i.User.Name</h4>
+    <p>@i.Content<br /><span>like:-@i.Like </span></p>
+    
+    </div><br />
+}
+<form asp-action="post" method="post" class="form-horizontal" role="form">
+    <div class="form-group">
+
+        <div class="col-md-5">
+            <input type="submit" class="btn btn-primary" value="Add New Post" />
+        </div>
+    </div>
+</form>
+@*@model Post
+    <form asp-action="Index" method="post" class="form-horizontal" role="form">
+
+        <div class="form-group">
+            <label asp-for="Content" class="col-md-2 control-label"></label>
+            <div class="col-md-5">
+                <textarea asp-for="Content" class="form-control" ></textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="UserId" class="col-md-2 control-label"></label>
+            <div class="col-md-5">
+                <input asp-for="UserId" class="form-control"/>
+            </div>
+        </div>
+        <div class="form-group">
+
+            <div class="col-md-5">
+                <input type="submit" class="btn btn-primary" value="Post" />
+            </div>
+        </div>
+    </form>*@
